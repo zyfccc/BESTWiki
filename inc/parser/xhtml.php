@@ -94,6 +94,7 @@ class Doku_Renderer_xhtml extends Doku_Renderer {
         if(!is_null($hid)) {
             $data['hid'] .= $hid;
         }
+        $data['target'] = strtoupper($data['target']);
         $data['range'] = $data['start'].'-'.(is_null($end) ? '' : $end);
         unset($data['start']);
         $this->doc .= '<!-- EDIT'.json_encode ($data).' -->';
