@@ -9,7 +9,7 @@
 if(!defined('DOKU_INC')) die('meh.');
 if(!defined('NL')) define('NL',"\n");
 if (!defined('SEC_EDIT_PATTERN')) {
-    define('SEC_EDIT_PATTERN', '#<!-- EDIT(.*) -->#');
+    define('SEC_EDIT_PATTERN', '#<!-- EDIT({.*}) -->#');
 }
 
 
@@ -115,6 +115,9 @@ function html_secedit($text,$show=true){
  */
 function html_secedit_button($matches){
     $data = json_decode($matches[1], true);
+    if ($data == NULL) {
+        return;
+    }
     $data ['target'] = strtolower($data['target']);
     $data ['hid'] = strtolower($data['hid']);
 
