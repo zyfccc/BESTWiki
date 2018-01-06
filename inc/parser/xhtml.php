@@ -60,7 +60,7 @@ class Doku_Renderer_xhtml extends Doku_Renderer {
      * Register a new edit section range
      *
      * @param int    $start  The byte position for the edit start
-     * @param array  $data   Assoziative array with section data:
+     * @param array  $data   Associative array with section data:
      *                       Key 'name': the section name/title
      *                       Key 'target': the target for the section edit,
      *                                     e.g. 'section' or 'table'
@@ -94,7 +94,6 @@ class Doku_Renderer_xhtml extends Doku_Renderer {
         if(!is_null($hid)) {
             $data['hid'] .= $hid;
         }
-        $data['target'] = strtoupper($data['target']);
         $data['range'] = $data['start'].'-'.(is_null($end) ? '' : $end);
         unset($data['start']);
         $this->doc .= '<!-- EDIT'.json_encode ($data).' -->';
