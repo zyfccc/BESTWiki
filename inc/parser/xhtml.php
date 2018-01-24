@@ -76,6 +76,10 @@ class Doku_Renderer_xhtml extends Doku_Renderer {
      * @author Adrian Lang <lang@cosmocode.de>
      */
     public function startSectionEdit($start, $data) {
+        if (!is_array($data)) {
+            msg('startSectionEdit: $data is NOT an array!', -1);
+            return '';
+        }
         $data['secid'] = ++$this->lastsecid;
         $data['start'] = $start;
         $this->sectionedits[] = $data;
