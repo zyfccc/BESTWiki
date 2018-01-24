@@ -66,8 +66,11 @@ class Doku_Renderer_xhtml extends Doku_Renderer {
      *                                     e.g. 'section' or 'table'
      *                       Key 'hid': header id
      *                       Key 'codeblockOffset': actual code block index
-     *                       Key 'start': reserved, do not use
-     *                       Key 'range': reserved, do not use
+     *                       Key 'start': set in startSectionEdit(),
+     *                                    do not set yourself
+     *                       Key 'range': calculated from 'start' and
+     *                                    $key in finishSectionEdit(),
+     *                                    do not set yourself
      * @return string  A marker class for the starting HTML element
      *
      * @author Adrian Lang <lang@cosmocode.de>
