@@ -49,7 +49,8 @@ $dokuwiki_hash = array(
     '2014-05-05'   => '263c76af309fbf083867c18a34ff5214',
     '2015-08-10'   => '263c76af309fbf083867c18a34ff5214',
     '2016-06-26'   => 'fd3abb6d89853dacb032907e619fbd73',
-    '2017-02-19'   => 'e4f2f5a34c9dbcd96a5ecc8f2df25bd9'
+    '2017-02-19'   => 'e4f2f5a34c9dbcd96a5ecc8f2df25bd9',
+	'2018-02-19'   => 'ab98ba8026e19ee6de0c4c1d2c063695'
 );
 
 
