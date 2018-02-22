@@ -107,7 +107,7 @@ $conf['subscribe_time'] = 24*60*60;      //Time after which digests / lists are 
                                          //Should be smaller than the time specified in recent_days
 $conf['notify']      = '';               //send change info to this email (leave blank for nobody)
 $conf['registernotify'] = '';            //send info about newly registered users to this email (leave blank for nobody)
-$conf['mailfrom']    = '';               //use this email when sending mails
+$conf['mailfrom']    = 'foodsmartphone@mail.com';               //use this email when sending mails
 $conf['mailprefix']  = '';               //use this as prefix of outgoing mails
 $conf['htmlmail']    = 1;                //send HTML multipart mails
 
